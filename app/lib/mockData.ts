@@ -52,10 +52,34 @@ export const LIVE_ROOMS: LiveRoom[] = [
 ];
 
 export const ISSUE_OPTIONS = [
-  { id: 'mismatch', label: '图文不匹配问题' },
-  { id: 'carousel', label: '轮播图片问题' },
-  { id: 'invalid_flash', label: '无效空闪问题' },
-  { id: 'duration', label: '视频时长问题' },
-  { id: 'ux', label: '用户体验问题' },
-  { id: 'other', label: '其他问题（需要说明）' },
+  { 
+    id: 'mismatch', 
+    label: '图文不匹配问题',
+    description: '虽然图是商品，但与当前口播句子的“重点”不匹配。'
+  },
+  { 
+    id: 'carousel', 
+    label: '轮播图片问题',
+    description: '有头图轮播现象：不同图片在一个 KT 板中轮播。'
+  },
+  { 
+    id: 'invalid_flash', 
+    label: '无效空闪问题',
+    description: '图片弹出，但对应口播文稿是一句毫无信息量的废话。例如：在讲解卖点时，突然弹出一张产品参数图且图与任何关键词都挂不上钩。'
+  },
+  { 
+    id: 'duration', 
+    label: '视频时长问题',
+    description: '在口播讲解卖点的周期内，素材提前消失或一闪而过，导致图片展示时长短于用户获取信息所需时长，造成视听体验断层。'
+  },
+  { 
+    id: 'ux', 
+    label: '用户体验问题',
+    description: '对应口播的 SKU 脚本中，KT 板展示的信息不足，不能通过声画配合充分传达商品卖点信息。'
+  },
+  { 
+    id: 'other', 
+    label: '其他问题（需要说明）',
+    description: ''
+  },
 ];

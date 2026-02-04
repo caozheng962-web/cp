@@ -2,99 +2,98 @@
   {
     "roomId": "fashion",
     "skuId": "f-001",
-    "evaluatorId": "京东科技-大明",
-    "videoQualified": "qualified",
+    "evaluatorId": "科技-11",
+    "videoQualified": "unqualified",
     "visualQualified": "qualified",
-    "boardAppearanceCount": 4,
+    "boardAppearanceCount": 3,
     "issues": [
       "mismatch"
     ],
     "otherIssueDesc": "",
-    "timestamp": 1770179096421
+    "timestamp": 1770208250382
   },
   {
     "roomId": "fashion",
     "skuId": "f-002",
-    "evaluatorId": "京东科技-大明",
+    "evaluatorId": "科技-11",
     "videoQualified": "qualified",
-    "visualQualified": "unqualified",
-    "boardAppearanceCount": 4,
-    "issues": [
-      "mismatch"
-    ],
-    "otherIssueDesc": "",
-    "timestamp": 1770179112222
-  },
-  {
-    "roomId": "fashion",
-    "skuId": "f-003",
-    "evaluatorId": "京东科技-大明",
-    "videoQualified": "qualified",
-    "visualQualified": "unqualified",
-    "boardAppearanceCount": 4,
-    "issues": [
-      "mismatch"
-    ],
-    "otherIssueDesc": "",
-    "timestamp": 1770179122406
-  },
-  {
-    "roomId": "fashion",
-    "skuId": "f-005",
-    "evaluatorId": "京东科技-大明",
-    "videoQualified": "qualified",
-    "visualQualified": "unqualified",
-    "boardAppearanceCount": 4,
-    "issues": [
-      "mismatch"
-    ],
-    "otherIssueDesc": "",
-    "timestamp": 1770179142037
-  },
-  {
-    "roomId": "fashion",
-    "skuId": "f-004",
-    "evaluatorId": "京东科技-大明",
-    "videoQualified": "qualified",
-    "visualQualified": "unqualified",
-    "boardAppearanceCount": 4,
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 3,
     "issues": [
       "carousel"
     ],
     "otherIssueDesc": "",
-    "timestamp": 1770179151144
+    "timestamp": 1770208258825
   },
   {
-    "roomId": "supermarket",
-    "skuId": "s-001",
-    "evaluatorId": "京东科技-大明",
+    "roomId": "fashion",
+    "skuId": "f-003",
+    "evaluatorId": "科技-11",
     "videoQualified": "qualified",
-    "visualQualified": "unqualified",
-    "boardAppearanceCount": 4,
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 3,
     "issues": [
       "mismatch"
     ],
     "otherIssueDesc": "",
-    "timestamp": 1770179758672
+    "timestamp": 1770208266691
   },
   {
-    "roomId": "supermarket",
-    "skuId": "s-002",
-    "evaluatorId": "京东科技-大明",
+    "roomId": "fashion",
+    "skuId": "f-004",
+    "evaluatorId": "科技-11",
+    "videoQualified": "qualified",
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 1,
+    "issues": [
+      "carousel"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208273544
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-005",
+    "evaluatorId": "科技-11",
     "videoQualified": "qualified",
     "visualQualified": "unqualified",
-    "boardAppearanceCount": 4,
+    "boardAppearanceCount": 3,
     "issues": [
-      "carousel",
-      "other"
+      "mismatch"
     ],
-    "otherIssueDesc": "4333",
-    "timestamp": 1770179775241
+    "otherIssueDesc": "",
+    "timestamp": 1770208283745
   },
   {
-    "roomId": "supermarket",
-    "skuId": "s-003",
-    "evaluatorId": "京东科技-大明",
+    "roomId": "fashion",
+    "skuId": "f-001",
+    "evaluatorId": "京东科技-13",
+    "videoQualified": "unqualified",
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 2,
+    "issues": [
+      "mismatch"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208325434
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-002",
+    "evaluatorId": "京东科技-13",
+    "videoQualified": "unqualified",
+    "visualQualified": "unqualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208333981
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-003",
+    "evaluatorId": "京东科技-13",
     "videoQualified": "qualified",
     "visualQualified": "unqualified",
     "boardAppearanceCount": 3,
@@ -102,32 +101,171 @@
       "carousel"
     ],
     "otherIssueDesc": "",
-    "timestamp": 1770179790339
+    "timestamp": 1770208340574
   },
   {
-    "roomId": "supermarket",
-    "skuId": "s-004",
-    "evaluatorId": "京东科技-大明",
-    "videoQualified": "qualified",
+    "roomId": "fashion",
+    "skuId": "f-004",
+    "evaluatorId": "京东科技-13",
+    "videoQualified": "unqualified",
     "visualQualified": "qualified",
-    "boardAppearanceCount": 4,
+    "boardAppearanceCount": 3,
     "issues": [
-      "carousel"
+      "duration"
     ],
     "otherIssueDesc": "",
-    "timestamp": 1770179797322
+    "timestamp": 1770208347402
   },
   {
-    "roomId": "supermarket",
-    "skuId": "s-005",
-    "evaluatorId": "京东科技-大明",
-    "videoQualified": "qualified",
-    "visualQualified": "unqualified",
-    "boardAppearanceCount": 4,
+    "roomId": "fashion",
+    "skuId": "f-005",
+    "evaluatorId": "京东科技-13",
+    "videoQualified": "unqualified",
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 3,
     "issues": [
       "mismatch"
     ],
     "otherIssueDesc": "",
-    "timestamp": 1770179804236
+    "timestamp": 1770208355489
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-001",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "qualified",
+    "visualQualified": "unqualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch",
+      "carousel",
+      "duration"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208497119
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-002",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "qualified",
+    "visualQualified": "unqualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch",
+      "invalid_flash",
+      "duration"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208507957
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-003",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "qualified",
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch",
+      "invalid_flash"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208514446
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-004",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "unqualified",
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "duration"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208523143
+  },
+  {
+    "roomId": "fashion",
+    "skuId": "f-005",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "qualified",
+    "visualQualified": "unqualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch",
+      "invalid_flash"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208532458
+  },
+  {
+    "roomId": "supermarket",
+    "skuId": "s-001",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "qualified",
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch",
+      "invalid_flash"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208548859
+  },
+  {
+    "roomId": "supermarket",
+    "skuId": "s-002",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "unqualified",
+    "visualQualified": "unqualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "carousel"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208559040
+  },
+  {
+    "roomId": "supermarket",
+    "skuId": "s-003",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "unqualified",
+    "visualQualified": "unqualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch",
+      "carousel"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208569963
+  },
+  {
+    "roomId": "supermarket",
+    "skuId": "s-004",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "qualified",
+    "visualQualified": "unqualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "invalid_flash"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208575675
+  },
+  {
+    "roomId": "supermarket",
+    "skuId": "s-005",
+    "evaluatorId": "京东科技-1234",
+    "videoQualified": "unqualified",
+    "visualQualified": "qualified",
+    "boardAppearanceCount": 3,
+    "issues": [
+      "mismatch",
+      "carousel"
+    ],
+    "otherIssueDesc": "",
+    "timestamp": 1770208583393
   }
 ]

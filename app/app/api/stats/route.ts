@@ -5,7 +5,10 @@ import { LIVE_ROOMS } from '@/lib/mockData';
 
 const SUBMISSIONS_FILE = path.join(process.cwd(), 'data', 'submissions.json');
 
-export async function GET() {
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const evaluatorId = searchParams.get('evaluatorId');
+
   try {
     let submissions = [];
     try {
@@ -15,16 +18,16 @@ export async function GET() {
       // File might not exist
     }
 
-    // Count distinct submissions per room
-    // Since submissions.json stores { roomId, evaluatorId, ... }
-    // A "completed evaluation" is one entry in submissions.json (assuming we only create it when all SKUs are done)
-    
     const stats: Record<string, number> = {};
     
-    // Initialize with 0
     LIVE_ROOMS.forEach(r => stats[r.id] = 0);
 
     submissions.forEach((s: any) => {
+      // If evaluatorId is provided, only count if it matches
+      if (evaluatorId && s.evaluatorId !== evaluatorId) {
+        return;
+      }
+
       if (stats[s.roomId] !== undefined) {
         stats[s.roomId]++;
       }

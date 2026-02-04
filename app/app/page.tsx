@@ -12,11 +12,16 @@ export default function Home() {
   const [stats, setStats] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    fetch('/api/stats')
-      .then(res => res.json())
-      .then(data => setStats(data))
-      .catch(err => console.error('Failed to fetch stats', err));
-  }, []);
+    if (evaluatorId) {
+      fetch(`/api/stats?evaluatorId=${encodeURIComponent(evaluatorId)}`)
+        .then(res => res.json())
+        .then(data => setStats(data))
+        .catch(err => console.error('Failed to fetch stats', err));
+    } else {
+      // Clear stats if no user logged in
+      setStats({});
+    }
+  }, [evaluatorId]);
 
   return (
     <main className="min-h-screen bg-gray-50 p-8 flex flex-col items-center">
@@ -60,15 +65,6 @@ export default function Home() {
           ))}
         </section>
 
-        <section className="flex justify-center pt-8 border-t border-gray-200">
-          <Link 
-            href="/dashboard"
-            className="flex items-center text-gray-600 hover:text-blue-600 font-medium text-lg transition-colors group"
-          >
-            <BarChart2 className="w-5 h-5 mr-2 group-hover:text-blue-600" />
-            查看数据表现
-          </Link>
-        </section>
       </div>
 
       <LoginModal 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Evaluation, SKU } from '@/lib/types';
 import { ISSUE_OPTIONS } from '@/lib/mockData';
-import { Save } from 'lucide-react';
+import { Save, HelpCircle } from 'lucide-react';
 
 interface EvaluationFormProps {
   roomId: string;
@@ -11,10 +11,24 @@ interface EvaluationFormProps {
   onSave: (evaluation: Evaluation) => Promise<void>;
 }
 
+function Tooltip({ text }: { text: string }) {
+  if (!text) return null;
+  return (
+    <div className="group relative inline-block ml-1 align-middle">
+      <HelpCircle className="w-4 h-4 text-gray-400 cursor-help" />
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none text-center">
+        {text}
+        {/* Arrow */}
+        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-800"></div>
+      </div>
+    </div>
+  );
+}
+
 export function EvaluationForm({ 
   roomId, 
   sku, 
-  evaluatorId,
+  evaluatorId, 
   existingEvaluation, 
   onSave 
 }: EvaluationFormProps) {
@@ -89,7 +103,10 @@ export function EvaluationForm({
     <div className="bg-gray-50 p-4 rounded-b-lg border-t border-gray-200 space-y-6">
       {/* Question 1 */}
       <div className="space-y-2">
-        <label className="block font-medium text-gray-700">1. 该 SKU 所在的视频片段整体是否合格？</label>
+        <div className="flex items-center">
+          <label className="block font-medium text-gray-700">1. 该 SKU 所在的视频片段整体是否合格？</label>
+          <Tooltip text="若出现任何一条问题项（图文不匹配、轮播、空闪、时长、体验问题等），整体即视为不合格。" />
+        </div>
         <div className="flex gap-4">
           <label className="flex items-center gap-2 cursor-pointer">
             <input 
@@ -117,7 +134,10 @@ export function EvaluationForm({
 
       {/* Question 2 */}
       <div className="space-y-2">
-        <label className="block font-medium text-gray-700">2. 该 SKU 的 KT 板视觉是否合格？</label>
+        <div className="flex items-center">
+          <label className="block font-medium text-gray-700">2. 该 SKU 的 KT 板视觉是否合格？</label>
+          <Tooltip text="当 KT 板中显示低清素材、存在轮播现象，或出现图片挡手等情况时，视为不合格。" />
+        </div>
         <div className="flex gap-4">
           <label className="flex items-center gap-2 cursor-pointer">
             <input 
@@ -162,20 +182,24 @@ export function EvaluationForm({
         <label className="block font-medium text-gray-700">当前 SKU 存在哪些问题？（可多选）</label>
         <div className="space-y-2">
           {ISSUE_OPTIONS.map((opt) => (
-            <label key={opt.id} className="flex items-center gap-2 cursor-pointer">
-              <input 
-                type="checkbox"
-                checked={formData.issues?.includes(opt.id)}
-                onChange={(e) => {
-                  const newIssues = e.target.checked 
-                    ? [...(formData.issues || []), opt.id]
-                    : (formData.issues || []).filter(id => id !== opt.id);
-                  setFormData({...formData, issues: newIssues});
-                }}
-                className="rounded text-blue-600 focus:ring-blue-500"
-              />
-              <span>{opt.label}</span>
-            </label>
+            <div key={opt.id} className="flex items-center">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input 
+                  type="checkbox"
+                  checked={formData.issues?.includes(opt.id)}
+                  onChange={(e) => {
+                    const newIssues = e.target.checked 
+                      ? [...(formData.issues || []), opt.id]
+                      : (formData.issues || []).filter(id => id !== opt.id);
+                    setFormData({...formData, issues: newIssues});
+                  }}
+                  className="rounded text-blue-600 focus:ring-blue-500"
+                />
+                <span>{opt.label}</span>
+              </label>
+              {/* Tooltip for issues */}
+              {opt.description && <Tooltip text={opt.description} />}
+            </div>
           ))}
         </div>
       </div>
