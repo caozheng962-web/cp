@@ -1,0 +1,39 @@
+# Implementation Plan - Live Stream KT Board Evaluation Tool
+
+## Phase 1: Project Setup and Initialization
+- [x] Initialize Next.js project with TypeScript and Tailwind CSS.
+- [x] Set up project structure (components, pages/app, styles, utils).
+- [x] Configure UI components (buttons, cards, forms) using Tailwind.
+- [x] Create mock data for Live Rooms and SKUs.
+
+## Phase 2: Homepage Development
+- [x] Create Homepage layout.
+- [x] Implement "Live Stream Entry" cards (4 rooms).
+- [x] Implement "Data Dashboard" entry button.
+- [x] Add navigation logic to evaluation pages and dashboard.
+
+## Phase 3: Evaluation Page Development
+- [x] Create generic Evaluation Page layout (Left: Video, Right: SKU List).
+- [x] Implement Video Player component (HTML5 video with custom controls if needed, or standard controls).
+- [x] Implement SKU List component with expansion logic.
+- [x] Create Evaluation Form component (Radio buttons, Number input, Checkboxes, Text area).
+- [x] Implement "Save SKU Evaluation" logic (save to local state/API).
+- [x] Implement "Submit All" button and logic (validation, confirmation modal).
+
+## Phase 4: Data Storage & API (Simple Backend via Next.js API Routes)
+- [x] Create API route to save evaluation data (POST).
+- [x] Create API route to fetch evaluation data (GET).
+- [x] Use a simple JSON file or in-memory storage for the prototype to share data across "users" (simulated).
+
+## Phase 5: Data Dashboard Development
+- [x] Create Dashboard layout with Tabs (Overview, SKU Details, Problem Distribution).
+- [x] Implement "Overview" tab with summary statistics table.
+- [x] Implement "SKU Details" tab with filtering and sorting.
+- [x] Implement "Problem Distribution" tab with frequency analysis.
+- [x] (Optional) Add charts using a library like Recharts if needed.
+
+## Phase 6: Final Polish and Review
+- [x] Verify all requirements from PRD are met.
+- [x] Check UI/UX against description.
+- [x] Fix any bugs or issues.
+- [x] Final code cleanup.
