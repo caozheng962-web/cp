@@ -142,7 +142,7 @@ export default function RoomPage() {
             currentSkuId={currentSkuId}
             setCurrentSkuId={setCurrentSkuId}
             onSaveEvaluation={handleSaveEvaluation}
-            evaluatorId={evaluatorId}
+            evaluatorId={evaluatorId || ''}
           />
         </div>
       </main>
