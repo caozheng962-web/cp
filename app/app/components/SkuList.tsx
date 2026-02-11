@@ -93,7 +93,6 @@ export function SkuList({
                   )}
                   <div>
                     <div className="font-medium text-gray-900">{sku.name}</div>
-                    <div className="text-sm text-gray-500">¥ {sku.price}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-400">

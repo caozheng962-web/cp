@@ -153,6 +153,7 @@ export function SkuDetailsTab({ evaluations }: { evaluations: Evaluation[] }) {
         visualQualified: 0,
         boardCount: 0,
         issues: {} as Record<string, number>,
+        otherDescriptions: [] as string[],
       });
     }
 
@@ -164,12 +165,15 @@ export function SkuDetailsTab({ evaluations }: { evaluations: Evaluation[] }) {
     e.issues?.forEach(i => {
       stat.issues[i] = (stat.issues[i] || 0) + 1;
     });
+    if (e.otherIssueDesc) {
+      stat.otherDescriptions.push(e.otherIssueDesc);
+    }
   });
 
   const skuStats = Array.from(skuStatsMap.values());
 
   const exportToCsv = () => {
-    const headers = ['SKU名称', '直播间', '价格', '评测次数', '视频合格率', 'KT板合格率', '总KT板出现次数', ...ISSUE_OPTIONS.map(i => i.label)];
+    const headers = ['SKU名称', '直播间', '价格', '评测次数', '视频合格率', 'KT板合格率', '总KT板出现次数', ...ISSUE_OPTIONS.map(i => i.label), '其他问题说明'];
     const rows = skuStats.map(s => [
       s.name,
       s.roomName,
@@ -178,7 +182,8 @@ export function SkuDetailsTab({ evaluations }: { evaluations: Evaluation[] }) {
       (s.videoQualified / s.total * 100).toFixed(0) + '%',
       (s.visualQualified / s.total * 100).toFixed(0) + '%',
       s.boardCount,
-      ...ISSUE_OPTIONS.map(i => s.issues[i.id] || 0)
+      ...ISSUE_OPTIONS.map(i => s.issues[i.id] || 0),
+      s.otherDescriptions.join('; ') || ''
     ]);
     
     const csvContent = [
@@ -227,9 +232,10 @@ export function SkuDetailsTab({ evaluations }: { evaluations: Evaluation[] }) {
               <th className="px-4 py-3 text-left font-medium text-gray-500">视频合格率</th>
               <th className="px-4 py-3 text-left font-medium text-gray-500">KT板合格率</th>
               <th className="px-4 py-3 text-left font-medium text-gray-500">总KT板数</th>
-              {ISSUE_OPTIONS.slice(0, 3).map(opt => (
+              {ISSUE_OPTIONS.map(opt => (
                 <th key={opt.id} className="px-4 py-3 text-left font-medium text-gray-500">{opt.label}</th>
               ))}
+              <th className="px-4 py-3 text-left font-medium text-gray-500">其他问题说明</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
@@ -242,9 +248,12 @@ export function SkuDetailsTab({ evaluations }: { evaluations: Evaluation[] }) {
                 <td className="px-4 py-3 text-gray-900">{(row.videoQualified / row.total * 100).toFixed(0)}%</td>
                 <td className="px-4 py-3 text-gray-900">{(row.visualQualified / row.total * 100).toFixed(0)}%</td>
                 <td className="px-4 py-3 text-gray-900">{row.boardCount}</td>
-                {ISSUE_OPTIONS.slice(0, 3).map(opt => (
+                {ISSUE_OPTIONS.map(opt => (
                   <td key={opt.id} className="px-4 py-3 text-gray-500">{row.issues[opt.id] || 0}</td>
                 ))}
+                <td className="px-4 py-3 text-gray-500 max-w-xs truncate" title={row.otherDescriptions.join('; ')}>
+                  {row.otherDescriptions.join('; ') || '-'}
+                </td>
               </tr>
             ))}
           </tbody>
